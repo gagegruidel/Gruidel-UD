@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <header><h1>Accessible Forms</h1></header>
+    <main>
+        <form id="myform" method="post">
+            <fieldset>
+                <legend>Give me your information please and thank you!</legend>
+                
+                <label for="username">
+                    what is your name?
+                    <input type="text" id="username" placeholder="first last" required>
+                </label>
+
+                <label for="your-email">
+                    what is your email?
+                    <input type="email" id="your email" placeholder="funkyman@amped.com">
+                </label>
+
+                <label for="website">
+                    what is your website?
+                    <input type="url" id="your website" placeholder="http://www.swagmoneyap.com">
+                </label>
+
+                <label for="phone">
+                    what is your phone number?
+                    <input type="tel" id="phone" minlength="10" placeholder="777-777-7777">
+                </label>
+
+                <label for="age">
+                    how old are you?
+                    <input type="number" id="age" placeholder="88">
+                </label>
+
+                <label for="password">
+                    what is your password?
+                    <input type="text" id="password" maxlength="20" minlength="5" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required>
+                    <ul class="inputRequirements">
+                        <li>must be at least 5 characters and contain uppercase, lowercase, number and symbol</li>
+                    </ul>
+                </label>
+
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+</html>
