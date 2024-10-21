@@ -66,8 +66,8 @@ body {
 
   
   input:focus {
-    background: black;
-    color: white;
+    background: white;
+    color: blue;
     border: 4px solid blueviolet;
   
   }
@@ -76,7 +76,7 @@ body {
   }
   
   input:invalid {
-    border: 1px dotted red;
+    border: 1px solid red;
   }
   
   label

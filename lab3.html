@@ -13,7 +13,6 @@
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main</a>
-
   <header>
     <h1>Time Travelers Portal</h1>
     <time datetime="2024-10-21">October 21, 2024</time>
@@ -81,6 +80,14 @@
             <option value="observation">Observation</option>
             <option value="leisure">Leisure</option>
           </select>
+
+          <label for="code">
+            What is your traveler code?
+            <input type="text" id="password" maxlength="20" minlength="5" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required>
+            <ul class="inputRequirements">
+                <li>must be at least 5 characters and contain uppercase, lowercase, number and symbol</li>
+            </ul>
+          </label>
 
           <button type="submit">Request Jump</button>
         </fieldset>
