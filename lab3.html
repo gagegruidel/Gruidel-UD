@@ -7,85 +7,89 @@
   <title>Time Travelers Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="/Gruidel-UD/lab3.css">
+  <link rel="stylesheet" href="/lab3.css">
+  <link rel="script" href="/Gruidel-UD/lab3.css">
 </head>
-<h1 class="sr-only">Time Travelers Portal</h1>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main</a>
+
   <header>
     <h1>Time Travelers Portal</h1>
     <time datetime="2024-10-21">October 21, 2024</time>
-    <nav id="Main Navigation">
+    <nav id="main-navigation" aria-label="Main Navigation">
         <h1 class="sr-only">Navigation</h1>
       <ul>
         <li><a href="/Gruidel-UD/index.html">Class Portal</a></li>
-        <li><a href="#Time Travelers Info">Time Travelers Information</a></li>
-        <li><a href="#Time Jump Form">Time Jump Form</a></li>
-        <li><a href="#Time Travelers Log">Time Travelers Log</a></li>
+        <li><a href="#time-travelers-info">Time Travelers Info</a></li>
+        <li><a href="#time-jump-form">Time Jump Form</a></li>
+        <li><a href="#time-travelers-log">Time Travelers Log</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content" role="main">
+  <main id="main-content">
+    <section id="time-travelers-info">
+      <h2>Time Travelers Info</h2>
 
-    <section id="Time Travelers Info">
-        <h2 id="traveler-info">Traveler Information</h2>
+      <blockquote>“We must use time as a tool, not as a couch.” — John F. Kennedy</blockquote>
 
-        <blockquote>“We must use time as a tool, not as a couch.” — John F. Kennedy</blockquote>
+      <article id="intro-section">
+        <h3 id="intro">Introduction</h3>
+        <p><strong>Welcome to the Time Travelers Portal!</strong> Your gateway to the past and future. The <abbr title="Time Travelers Portal">TTP</abbr> will allow you to log your time jumps, request jumps, and stay informed on safety precautions.</p>
+      </article>
 
-        <article id="intro">
-          <h3 id="intro">Introduction</h3>
-          <p><strong>Welcome to the Time Travelers Portal!</strong> Your gateway to the past and future. The <abbr title="Time Travelers Portal">TTP</abbr></abbr> or Time Travelers Portal will allow you to log your time jumps, request time jumps, and keep up to date on safety precautions.</p>
-        </article>
-  
-        <aside id="note">
-          <h3 id="note">Important Note <span class="material-icons" aria-hidden="true">warning</span></h3>
-          <p><mark>Time travel can cause unintended paradoxes. Please avoid interacting with your past or future self.</mark></p>
-        </aside>
-  
-        <details id="details">
-          <summary>Travel Guidelines <span class="material-icons" aria-hidden="true">book</span></summary>
-          <ul>
-            <li>Avoid altering significant historical events.</li>
-            <li>Report any unintended anomalies.</li>
-            <li>Ensure your Time Portal Identification is present.</li>
-        </details>
-  
-        <section id="team">
-          <h3 id="team">Meet the Team <span class="material-icons" aria-hidden="true">groups</span></h3>
-          <ul>
-            <li>Dr. Franklin - Chief Time Scientist</li>
-            <li>Amy Sterling - Portal Technician</li>
-            <li>Brett Smith - Timeline Analyst</li>
-          </ul>
-        </section>
-  
+      <aside id="note-aside">
+        <h3 id="note">Important Note <span class="material-icons" aria-hidden="true">warning</span></h3>
+        <p><mark>Time travel can cause unintended paradoxes. Please avoid interacting with your past or future self.</mark></p>
+      </aside>
+
+      <details>
+        <summary>Travel Guidelines <span class="material-icons" aria-hidden="true">book</span></summary>
+        <ul>
+          <li>Avoid altering significant historical events.</li>
+          <li>Report any unintended anomalies.</li>
+          <li>Ensure your Time Portal Identification is present.</li>
+        </ul>
+      </details>
+
+      <section id="team-section">
+        <h3 id="team">Meet the Team <span class="material-icons" aria-hidden="true">groups</span></h3>
+        <ul>
+          <li>Dr. Franklin - Chief Time Scientist</li>
+          <li>Amy Sterling - Portal Technician</li>
+          <li>Brett Smith - Timeline Analyst</li>
+        </ul>
       </section>
+    </section>
 
-    
-    <article id="Time Jump Form">
-      <h2 id="form-section">Request a Time Jump</h2>
-      <form action="#" method="POST" aria-labelledby="form-section">
-        <label for="traveler-name">Name:</label>
-        <input type="text" id="traveler-name" name="name" required>
+    <article id="time-jump-form">
+      <h2>Time Jump Form</h2>
+      <form onsubmit="reloadForm(event)">
+        <fieldset>
+          <legend>Time Travel Details</legend>
 
-        <label for="year-destination">Year to Travel To:</label>
-        <input type="number" id="year-destination" name="year" min="-5000" max="5000" required>
+          <label for="traveler-name">Name:</label>
+          <input type="text" id="traveler-name" name="name" required>
 
-        <label for="travel-purpose">Purpose of Travel:</label>
-        <select id="travel-purpose" name="purpose">
-          <option value="research">Research</option>
-          <option value="observation">Observation</option>
-          <option value="leisure">Leisure</option>
-        </select>
+          <label for="year-destination">Year to Travel To:</label>
+          <input type="number" id="year-destination" name="year" min="-5000" max="5000" required>
 
-        <button type="submit">Request Jump</button>
+          <label for="travel-purpose">Purpose of Travel:</label>
+          <select id="travel-purpose" name="purpose">
+            <option value="research">Research</option>
+            <option value="observation">Observation</option>
+            <option value="leisure">Leisure</option>
+          </select>
+
+          <button type="submit">Request Jump</button>
+        </fieldset>
       </form>
     </article>
 
-    <section id="Time Travelers Log">
-      <h2 id="table-section">Time Traveler Log</h2>
-      <table id="table-section">
+    <section id="time-travelers-log">
+      <h2>Time Travelers Log</h2>
+      <table>
         <caption class="sr-only">Log of travelers, their destinations, and status</caption>
         <thead>
           <tr>
@@ -99,31 +103,29 @@
           <tr>
             <td>Dr. Ethan Rivera</td>
             <td>1776</td>
-            <td>Historical Research and Formation of the United States.</td>
+            <td>Historical Research</td>
             <td>Completed</td>
           </tr>
           <tr>
             <td>Eli Jenkins</td>
             <td>2055</td>
-            <td>To observe the rise of the AI overlords.</td>
+            <td>Observe AI Development</td>
             <td>Pending</td>
           </tr>
           <tr>
             <td>Alice Redding</td>
             <td>307</td>
-            <td>Leisure Trip to watch gladiator fights and enjoy the Roman Empire.</td>
+            <td>Leisure Trip to Rome</td>
             <td>In Progress</td>
           </tr>
         </tbody>
       </table>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; Time Travelers Portal <span class="material-icons" aria-hidden="true">history</span></p>
   </footer>
-
 </body>
 
 </html>
