@@ -178,3 +178,7 @@ nav ul li a:hover {
     text-align: center;
   }
 }
+
+iframe {
+    border: 2px solid #FFF; /* or any color you prefer */
+  }
